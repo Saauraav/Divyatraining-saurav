@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			/*<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">*/
+			<link href="jquery.treetable.css" rel="stylesheet" type="text/css" />
+			<link href="jquery.treetable.theme.default" rel="stylesheet" type="text/css" />
+			<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+		</style>
+	</head>
+	<body>	
+
+		<table id="tblData">
+			<tbody>
+				<!--ko foreach: flatList -->
+				<tr data-bind="attr: {'data-tt-id': $data.id, 'data-tt-parent-id':$data.parent}">
+					<td data-bind='text: $data.name'></td>
+				</tr>
+				<!--/ko-->
+			</tbody>
+		</table>
+
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery-treetable/3.2.0/jquery.treetable.js"></script>
+		<script type='text/javascript' src='knockout-3.5.0.js'></script>
+		<script type='text/javascript' src="javaScript.js"></script>
+
+	</body>
+</html>
